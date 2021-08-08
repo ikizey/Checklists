@@ -1,24 +1,20 @@
-//
-//  ItemDetailViewController.swift
-//  Checklists
-//
-//  Created by PrincePhoenix on 08.08.2021.
-//
+//  Created by ikizey on 08.08.2021.
+
 
 import UIKit
+
 
 protocol ItemDetailViewControllerDelegate: class {
     func addItemViewControllerDidCancel(
         _ controller: ItemDetailViewController)
-    
     func addItemViewController(
         _ controller: ItemDetailViewController,
         didFinishAdding item: ChecklistItem)
-    
     func addItemViewController(
         _ controller: ItemDetailViewController,
         didFinishEditing item: ChecklistItem)
 }
+
 
 class ItemDetailViewController: UITableViewController {
 

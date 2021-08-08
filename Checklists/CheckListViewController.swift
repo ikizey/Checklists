@@ -1,20 +1,20 @@
-//
-//  CheckListViewController.swift
-//  Checklists
-//
-//  Created by PrincePhoenix on 07.08.2021.
-//
+//  Created by ikizey on 07.08.2021.
+
 
 import UIKit
+
 
 class CheckListViewController: UITableViewController {
 
     var items = [ChecklistItem]()
     var itemToEdit: ChecklistItem?
+    var checklist: Checklist!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.largeTitleDisplayMode = .never
+        title = checklist.name
         loadChecklistItems()
     }
 
