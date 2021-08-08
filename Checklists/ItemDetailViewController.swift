@@ -47,15 +47,6 @@ class ItemDetailViewController: UITableViewController {
         textField.becomeFirstResponder()
     }
 
-    // MARK: - Table View Delegates
-    override func tableView(
-        _ tableView: UITableView,
-        willSelectRowAt indexPath: IndexPath
-    ) -> IndexPath? {
-        
-        nil
-    }
-
     // MARK: - Actions
     @IBAction func cancel() {
         delegate?.addItemViewControllerDidCancel(self)
@@ -75,8 +66,23 @@ class ItemDetailViewController: UITableViewController {
     }
 }
 
+
+// MARK: - Table View Delegates
+extension ItemDetailViewController {
+    
+    override func tableView(
+        _ tableView: UITableView,
+        willSelectRowAt indexPath: IndexPath
+    ) -> IndexPath? {
+        
+        nil
+    }
+}
+
+
 // MARK: - Text Field Delegates
 extension ItemDetailViewController: UITextFieldDelegate {
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String
     ) -> Bool {
         
